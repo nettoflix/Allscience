@@ -2,6 +2,8 @@
     <string name="title1">Matérias</string>
     <string name="app_name">School</string>
     <string name="Matemática">Matemática</string>
+    <string name="Fisica">Física</string>
+    <string name="Quimica">Química</string>
     <string name="title_activity_math">MathActivity</string>
     <!--
     This string is used for square devices and overridden by hello_world in
