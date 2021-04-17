@@ -122,7 +122,7 @@ public class MyMath {
         if(a==0) return b;
         return gcd(b%a, a);
     }
-    public bhaskara solveQuadraticEquation(double a, double b, double c) {
+    public static bhaskara solveQuadraticEquation(double a, double b, double c) {
         bhaskara roots = new bhaskara();
         if (a > 0) {
             roots.power_Of_B  = Math.pow(b, 2);
@@ -188,9 +188,9 @@ public class MyMath {
         return dt;
 
     }
-    private Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+    private static Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 
-    public boolean isNumeric(String strNum) {
+    public static boolean isNumeric(String strNum) {
         if (strNum == null) {
             return false;
         }
@@ -222,7 +222,7 @@ public class MyMath {
     }
 
 
-    public class bhaskara {
+    public static class bhaskara {
         public double power_Of_B;
         public double mult_4ac;
         public  double sqrtDelta;

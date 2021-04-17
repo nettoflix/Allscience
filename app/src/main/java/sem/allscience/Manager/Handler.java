@@ -1,5 +1,7 @@
 package sem.allscience.Manager;
 
+import android.view.View;
+
 import java.text.DecimalFormat;
 
 public class Handler {
@@ -20,7 +22,18 @@ public class Handler {
         }
     }
   public static String formartDoubleToString(Double x) {
-      DecimalFormat numberFormat = new DecimalFormat("0.00");
-      return "R$" + numberFormat.format(x);
-  }
+     DecimalFormat numberFormat = new DecimalFormat("0.00");
+       return numberFormat.format(x);
+ }
+    public static void hideView(View v, boolean b)
+    {
+        if(b){
+            v.setVisibility(View.GONE);
+        }
+        else
+        {
+            v.setVisibility(View.VISIBLE);
+        }
+
+    }
 }

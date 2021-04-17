@@ -180,7 +180,7 @@ public class trigoGraphView extends View implements View.OnTouchListener {
         centerCircleY = bigCircleRadius + 10 ;
         //draw big circle
         canvas.drawCircle(centerX, centerCircleY, bigCircleRadius, linePaint);
-        //the 2 perpendicular lines who divides the circle in 4 parts
+        //the 2 perpendicular lines which divides the circle in 4 parts
         canvas.drawLine(centerX - bigCircleRadius, centerCircleY,centerX + bigCircleRadius , centerCircleY,linePaint);
         canvas.drawLine(centerX, centerCircleY - bigCircleRadius, centerX, centerCircleY+bigCircleRadius,linePaint);
         if(generalAngle!=90.0)

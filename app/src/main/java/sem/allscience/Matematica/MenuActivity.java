@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import sem.allscience.Manager.Handler;
 import sem.allscience.R;
 
 
@@ -49,16 +49,16 @@ public class MenuActivity extends AppCompatActivity {
     private void initFormulasViews() {
         enterBhaskara = (TextView)findViewById(R.id.id_enterBhaskara);
         enterGCD = (TextView)findViewById(R.id.id_enterGCD);
-        hideView(enterBhaskara, true);
-        hideView(enterGCD, true);
+        Handler.hideView(enterBhaskara, true);
+        Handler.hideView(enterGCD, true);
     }
 
     private void initAlgebraLinearViews() {
         algebraLinearListVisible = false;
         enterDt = (TextView) findViewById(R.id.id_enter_determinantes);
         enterMatrizMult = (TextView)findViewById(R.id.id_enter_matrizMultiplication);
-        hideView(enterMatrizMult, true);
-        hideView(enterDt, true);
+        Handler.hideView(enterMatrizMult, true);
+        Handler.hideView(enterDt, true);
     }
 
     //initializers
@@ -67,7 +67,7 @@ public class MenuActivity extends AppCompatActivity {
         trigoListVisible = false;
         //showTrigo = (TextView) findViewById(R.id.id_listTrigo);
         enterSohcahtoa = (TextView) findViewById(R.id.id_sohcahtoa);
-        hideView(enterSohcahtoa, true);
+        Handler.hideView(enterSohcahtoa, true);
     }
     //functions OnClick
     public void onEnterSohcahtoa(View view) {
@@ -81,7 +81,6 @@ public class MenuActivity extends AppCompatActivity {
     public void onEnterBhaskara(View view) {
         startActivity(iBhaskara);
     }
-
     public void onEnterGCD(View view) {
         startActivity(iGCD);
     }
@@ -92,12 +91,12 @@ public class MenuActivity extends AppCompatActivity {
     {
         if (trigoListVisible)
         {
-            hideView(enterSohcahtoa,true);
+            Handler.hideView(enterSohcahtoa,true);
             trigoListVisible = !trigoListVisible;
         }
         else
         {
-            hideView(enterSohcahtoa,false);
+            Handler.hideView(enterSohcahtoa,false);
             trigoListVisible = !trigoListVisible;
         }
 
@@ -105,44 +104,33 @@ public class MenuActivity extends AppCompatActivity {
     public void showAlgebraLinearList(View view) {
         if(algebraLinearListVisible)
         {
-            hideView(enterDt, true);
-            hideView(enterMatrizMult, true);
+            Handler.hideView(enterDt, true);
+            Handler.hideView(enterMatrizMult, true);
             algebraLinearListVisible = !algebraLinearListVisible;
         }
         else{
-            hideView(enterMatrizMult, false);
-            hideView(enterDt, false);
+            Handler.hideView(enterMatrizMult, false);
+            Handler.hideView(enterDt, false);
             algebraLinearListVisible = !algebraLinearListVisible;
         }
     }
     public void showFormulasList(View view) {
         if (formulasListVisible)
         {
-            hideView(enterBhaskara,true);
-            hideView(enterGCD,true);
+            Handler.hideView(enterBhaskara,true);
+            Handler.hideView(enterGCD,true);
             formulasListVisible = !formulasListVisible;
         }
         else
         {
-            hideView(enterBhaskara,false);
-            hideView(enterGCD,false);
+            Handler.hideView(enterBhaskara,false);
+            Handler.hideView(enterGCD,false);
             formulasListVisible = !formulasListVisible;
         }
     }
 
 
-    public void hideView(View v,boolean b)
-    {
-        if(b){
-            v.setVisibility(View.GONE);
-        }
-        else
-        {
-            v.setVisibility(View.VISIBLE);
-        }
 
-
-    }
 
 
 }

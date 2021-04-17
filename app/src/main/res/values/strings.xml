@@ -3,6 +3,15 @@
     <string name="app_name">School</string>
     <string name="Matemática">Matemática</string>
     <string name="Fisica">Física</string>
+    <!--strings related to the physics tab -->
+    <string name="CinematicaIntro">Cinemática é o ramo da física que estuda o movimentos dos objetos sem fazer refêrencia a forças</string>
+    <string name="defCinematicsVariables">Vi = velocidade inicial (m/s)\n
+        Vf = velocidade final (m/s)\n
+        d = deslocamento (metros)\n
+        a = aceleração constante (m/s) \n
+        t = tempo (segundos)
+    </string>
+    <!--....................................-->
     <string name="Quimica">Química</string>
     <string name="title_activity_math">MathActivity</string>
     <!--
@@ -37,4 +46,5 @@
     </string>
     <string name="bhaskara_text1">A solução para a equação quadrática pode ser calculada usando a Fórmula De Bhaskara</string>
     <string name="gcd_description">Usando o algoritimo de Euclides, o MDC permite você achar rapidamente o Maior Divisor Comum entre dois números</string>
+    <string name="title_activity_chemistry_menu">ChemistryMenuActivity</string>
 </resources>

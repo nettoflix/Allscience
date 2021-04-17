@@ -18,7 +18,7 @@ import sem.allscience.R;
 public class BhaskaraActivity extends AppCompatActivity {
     Intent iDeterminante;
     Dialog detailsDialog;
-    MyMath math;
+
     MyMath.bhaskara quadraticDetails;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class BhaskaraActivity extends AppCompatActivity {
         //initalize activities intents
         iDeterminante = new Intent(this, DeterminanteActivity.class);
         //initialize objects
-        math= new MyMath();
+
         detailsDialog = new Dialog(this);
     }
     //triggered but the calculete button
@@ -38,7 +38,7 @@ public class BhaskaraActivity extends AppCompatActivity {
         EditText cText = (EditText)findViewById(R.id.slot_c);
         TextView result =(TextView)findViewById(R.id.id_quadratic_results);
 
-        if(math.isNumeric(aText.getText().toString()) &&math.isNumeric(bText.getText().toString())&&math.isNumeric(cText.getText().toString()))
+        if(MyMath.isNumeric(aText.getText().toString()) && MyMath.isNumeric(bText.getText().toString())&&MyMath.isNumeric(cText.getText().toString()))
         {
             int iA = Integer.parseInt(aText.getText().toString());
             int iB = Integer.parseInt(bText.getText().toString());
@@ -47,7 +47,7 @@ public class BhaskaraActivity extends AppCompatActivity {
             double dA = Double.valueOf(iA);
             double dB = Double.valueOf(iB);
             double dC = Double.valueOf(iC);
-            quadraticDetails = math.solveQuadraticEquation(dA, dB, dC);
+            quadraticDetails = MyMath.solveQuadraticEquation(dA, dB, dC);
 
             if (quadraticDetails.noSolution) {
                 resultToShow = "Sem solução. A não pode ser 0!!";

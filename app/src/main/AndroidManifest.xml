@@ -16,13 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="sem.allscience.Matematica.MenuActivity"/>
-        <activity android:name="sem.allscience.Matematica.DeterminanteActivity"/>
-        <activity android:name="sem.allscience.Matematica.TrigonometriaActivity"/>
-        <activity android:name="sem.allscience.Matematica.BhaskaraActivity"/>
-        <activity android:name="sem.allscience.Matematica.GCDActivity"/>
-        <activity android:name="sem.allscience.Matematica.MatrixDimensionSelector"/>
-        <activity android:name="sem.allscience.Matematica.MatrizMultiplicationActivity"/>
+        <activity android:name=".Matematica.MenuActivity" />
+        <activity android:name=".Matematica.DeterminanteActivity" />
+        <activity android:name=".Matematica.TrigonometriaActivity" />
+        <activity android:name=".Matematica.BhaskaraActivity" />
+        <activity android:name=".Matematica.GCDActivity" />
+        <activity android:name=".Matematica.MatrixDimensionSelector" />
+        <activity android:name=".Matematica.MatrizMultiplicationActivity" />
+        <activity android:name=".Physics.PhysicsMenuActivity" />
+        <activity android:name=".Chemistry.ChemistryMenuActivity" />
+        <activity android:name=".Physics.CinematicaActivity" />
+
     </application>
 
 </manifest>

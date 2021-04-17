@@ -13,30 +13,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/id_quadratic_in_disguise"
-            android:layout_width="121dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="52dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/quadratic_in_disguise"
-
-
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/id_quadratic_in_disguise"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/bhaskara_intro"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_quadratic_in_disguise"
+                android:layout_gravity="center"
+                android:layout_width="121dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="52dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/quadratic_in_disguise"
+
+
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/id_quadratic_in_disguise"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/bhaskara_intro"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,8 +90,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -166,17 +177,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
                         android:text="Resultados:"
                         android:textColor="#FF2000"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/id_quadratic_results"
@@ -188,11 +199,10 @@
                 </LinearLayout>
 
 
-
                 <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <Button
@@ -203,17 +213,17 @@
                         android:onClick="calculeBhaskara"
                         android:text="Calcule"
                         android:textColor="@color/branco" />
+
                     <Button
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/id_showDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:background="@color/azulForte"
-                        android:textColor="@color/branco"
+                        android:onClick="showDetails"
                         android:text="detalhes"
-                        android:onClick="showDetails"/>
+                        android:textColor="@color/branco" />
                 </LinearLayout>
-
 
 
             </LinearLayout>
